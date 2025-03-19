@@ -1,0 +1,31 @@
+.sendForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.textarea {
+  resize: none;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1),
+    0 5px 20px 0 rgba(29, 33, 38, 0.03);
+  background: #f5f7fb;
+}
+
+.button {
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+
+  background: #06c;
+  -webkit-text-fill-color: aliceblue;
+}
+
+.button:hover {
+  background: rgb(94, 161, 228);
+}
+.button:active {
+  background: rgb(231, 58, 174);
+}
