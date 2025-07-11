@@ -21,11 +21,14 @@ export type AffairPriorityType = 'high' | 'low' | 'middle' // need to fix any
 export type AffairType = {
     _id: number // need to fix any
     name: string // need to fix any
+    _id: number // need to fix any
+    name: string // need to fix any
     priority: AffairPriorityType
 }
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
+const defaultAffairs: AffairType[] = [ // need to fix any
 const defaultAffairs: AffairType[] = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
@@ -43,10 +46,11 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
 export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
 
     return affairs.filter(el => el._id !== _id)
+    return affairs.filter(el => el._id !== _id)
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs) 
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
